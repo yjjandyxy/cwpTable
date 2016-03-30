@@ -1,0 +1,5 @@
+
+pod 'MJRefresh'
+pod 'SDCycleScrollView','~> 1.61'
+pod 'MBProgressHUD+BWMExtension', '~> 1.0.1'
+

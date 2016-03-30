@@ -8,10 +8,14 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate,SDCycleScrollViewDelegate{
+    var scrollView = SDCycleScrollView()
+let cellIden :String = "cccc"
+    @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.delegate = self
+        tableView.dataSource = self
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -21,5 +25,20 @@ class ViewController: UIViewController {
     }
 
 
+     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell1 = tableView.dequeueReusableCellWithIdentifier(cellIden)as!CCCCCC
+        
+        cell1.backgroundColor = UIColor.redColor()
+        cell1.getScroll()
+        
+    return cell1
+    
+    }
+    
+    
 }
 
